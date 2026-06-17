@@ -1,0 +1,10 @@
+# Ignore local environment files and credentials
+*.pem
+*.env
+
+# Ignore data downloads and logs
+tpch_sf100/
+*.log
+
+# macOS metadata
+.DS_Store
