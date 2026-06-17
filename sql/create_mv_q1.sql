@@ -1,3 +1,9 @@
+-- SingleStore Materialized View Example (Preview Feature)
+--
+-- SingleStore MVs are continuously updated aggregates maintained incrementally
+-- at commit time, unlike PostgreSQL's snapshot-based MVs that require periodic refresh.
+-- Check with your SingleStore version for availability.
+
 USE s2_tpch_sf100_demo;
 
 DROP MATERIALIZED VIEW IF EXISTS lineitem_q1_mv;

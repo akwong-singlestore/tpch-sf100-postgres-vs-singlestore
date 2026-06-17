@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# SingleStore Materialized View Measurement Script (Preview Feature)
+#
+# This script measures SingleStore materialized view performance for Q1.
+# SingleStore MVs are continuously updated aggregates maintained incrementally
+# at commit time, unlike PostgreSQL's snapshot-based approach.
+# Check with your SingleStore version for MV availability.
+
 : "${S2_HOST:?Set S2_HOST first}"
 : "${S2_USER:?Set S2_USER first}"
 : "${S2_PASS:?Set S2_PASS first}"

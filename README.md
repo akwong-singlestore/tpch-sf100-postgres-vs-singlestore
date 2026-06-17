@@ -52,13 +52,20 @@ For each query, capture or report:
 - Execution time on PostgreSQL
 - Output result counts and values
 - Any differences in query plans or optimizer behavior
-- MV creation/read time and maintenance model
+
+### Materialized Views (Optional)
+
+**PostgreSQL**: Materialized views are snapshot-based and require periodic `REFRESH MATERIALIZED VIEW` to update.
+
+**SingleStore**: Preview support for materialized-view style projections is available in recent releases. Unlike PostgreSQL's snapshot-based approach, SingleStore MVs are designed as continuously updated aggregates maintained incrementally at commit time. They're intended to be lean and aggregate-focused, with regular SQL views/joins layered on top if needed.
+
+The included MV scripts demonstrate performance characteristics for Q1 aggregations on both platforms.
 
 ## Notes
 
 - Keep credentials and sensitive connection details out of source control.
 - The PostgreSQL scripts are generic and can be used with any compatible PostgreSQL host.
-- The provided PostgreSQL MV definition is a reusable Q1 materialized view example.
+- **SingleStore Materialized Views**: The SingleStore MV scripts demonstrate preview functionality available in recent releases. Check with your SingleStore account team or documentation for availability in your specific version.
 
 ## Documentation references
 
