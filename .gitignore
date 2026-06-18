@@ -8,3 +8,10 @@ tpch_sf100/
 
 # macOS metadata
 .DS_Store
+
+# Local Streamlit app (not for external users)
+app.py
+benchmark_data.py
+requirements.txt
+README_STREAMLIT.md
+RUN_SORTED_BENCHMARK.md
